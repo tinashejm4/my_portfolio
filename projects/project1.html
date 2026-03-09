@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SME Loan Credit Risk Model</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#0f172a;
+color:#e2e8f0;
+line-height:1.7;
+}
+
+header{
+background:#020617;
+border-bottom:1px solid #1e293b;
+}
+
+nav{
+width:92%;
+max-width:1300px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-family:'JetBrains Mono',monospace;
+color:#38bdf8;
+font-weight:600;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#cbd5f5;
+font-size:14px;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+padding-top:50px;
+}
+
+.layout{
+display:grid;
+grid-template-columns:3fr 1fr;
+gap:40px;
+}
+
+/* Project Content */
+
+.project h1{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.meta{
+color:#94a3b8;
+margin-bottom:20px;
+font-size:14px;
+}
+
+.hero-img{
+width:100%;
+border-radius:8px;
+margin-bottom:30px;
+}
+
+.project h2{
+margin-top:30px;
+margin-bottom:12px;
+color:#38bdf8;
+}
+
+.project p{
+margin-bottom:18px;
+font-size:17px;
+}
+
+blockquote{
+border-left:3px solid #38bdf8;
+padding-left:15px;
+margin:20px 0;
+color:#94a3b8;
+font-style:italic;
+}
+
+/* Skills */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:10px;
+}
+
+.skill{
+background:#020617;
+border:1px solid #1e293b;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+}
+
+/* Sidebar */
+
+.sidebar{
+background:#020617;
+padding:20px;
+border-radius:8px;
+border:1px solid #1e293b;
+height:fit-content;
+}
+
+.sidebar h3{
+margin-bottom:15px;
+}
+
+.sidebar p{
+font-size:14px;
+margin-bottom:10px;
+color:#cbd5f5;
+}
+
+.sidebar a{
+color:#38bdf8;
+text-decoration:none;
+font-size:14px;
+}
+
+.sidebar a:hover{
+text-decoration:underline;
+}
+
+/* Footer */
+
+footer{
+margin-top:80px;
+padding:25px;
+text-align:center;
+border-top:1px solid #1e293b;
+color:#94a3b8;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.layout{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">TM Terminal</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#">Projects</a></li>
+<li><a href="#">Research</a></li>
+<li><a href="#">Blog</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+
+<div class="container">
+
+<div class="layout">
+
+
+<article class="project">
+
+<h1>SME Loan Credit Risk Model</h1>
+
+<div class="meta">
+Financial Analytics Project | Python | Risk Analysis
+</div>
+
+<img class="hero-img"
+src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+
+<p>
+
+This project focuses on developing a **credit risk assessment model**
+to estimate the probability of default for small and medium-sized
+enterprise (SME) loans.
+
+Financial institutions must accurately evaluate borrower risk in order
+to minimize loan losses while maintaining a healthy lending portfolio.
+
+</p>
+
+
+<h2>Business Problem</h2>
+
+<p>
+
+Banks and lending institutions face significant challenges when
+assessing the creditworthiness of SMEs due to limited financial history,
+inconsistent reporting, and industry volatility.
+
+Traditional credit assessments often rely heavily on manual judgement
+and limited financial ratios.
+
+This project aimed to develop a **data-driven credit risk model**
+that can support analysts in identifying high-risk borrowers earlier.
+
+</p>
+
+
+<h2>Business Value</h2>
+
+<p>
+
+Implementing a credit risk model allows financial institutions to:
+
+</p>
+
+<blockquote>
+
+• Improve loan approval accuracy  
+• Reduce probability of default within lending portfolios  
+• Standardize credit evaluation across analysts  
+• Identify high-risk clients earlier in the credit lifecycle
+
+</blockquote>
+
+
+<h2>Methodology</h2>
+
+<p>
+
+The model was developed using financial ratio analysis combined
+with statistical modelling techniques.
+
+The workflow included:
+
+</p>
+
+<p>
+
+1. Data collection and cleaning of financial statement data  
+2. Feature engineering using key credit ratios  
+3. Exploratory data analysis and visualization  
+4. Training a predictive model to estimate default probability  
+5. Evaluating model performance using classification metrics  
+
+</p>
+
+
+<h2>Tools & Skills Used</h2>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+<div class="skill">Pandas</div>
+<div class="skill">Financial Ratios</div>
+<div class="skill">Credit Risk Analysis</div>
+<div class="skill">Data Visualization</div>
+<div class="skill">Statistical Modelling</div>
+
+</div>
+
+
+<h2>Key Insights</h2>
+
+<p>
+
+The analysis revealed that liquidity ratios and interest coverage
+were among the strongest predictors of SME loan default.
+
+Businesses with a **Debt Service Coverage Ratio below 1.2**
+showed significantly higher probability of default.
+
+</p>
+
+<p>
+
+Additionally, companies operating in highly cyclical industries
+displayed more volatile financial ratios, reinforcing the importance
+of incorporating industry-specific risk factors into credit models.
+
+</p>
+
+
+<h2>Next Steps</h2>
+
+<p>
+
+Future improvements to the model could include:
+
+</p>
+
+<p>
+
+• Incorporating macroeconomic indicators  
+• Applying machine learning classification algorithms  
+• Building an interactive credit risk dashboard for analysts  
+
+</p>
+
+</article>
+
+
+
+<aside class="sidebar">
+
+<h3>Project Details</h3>
+
+<p><strong>Category:</strong> Credit Risk Analytics</p>
+<p><strong>Project Type:</strong> Financial Modelling</p>
+<p><strong>Dataset:</strong> SME financial statements</p>
+<p><strong>Tools:</strong> Python, Pandas, Excel</p>
+
+<br>
+
+<h3>Links</h3>
+
+<p><a href="#">View Code (GitHub)</a></p>
+<p><a href="#">Download Dataset</a></p>
+
+</aside>
+
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Tinashe Munikwa | Financial Analyst Portfolio</p>
+
+</footer>
+
+</body>
+</html>
