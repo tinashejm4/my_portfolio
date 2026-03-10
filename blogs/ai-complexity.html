@@ -212,7 +212,7 @@ By Tinashe Munikwa | February 2026 | Credit Risk Analysis
 </div>
 
 <img class="feature-image"
-src="https://images.unsplash.com/photo-1554224154-26032ffc0d07">
+src="../media/ai-contol.png">
 
 <p>
 
@@ -222,7 +222,7 @@ src="https://images.unsplash.com/photo-1554224154-26032ffc0d07">
     But as AI becomes more powerful, a critical question emerges:
     <i>What happens when banks rely on models they don’t fully understand?</i>
 
-    This is the heart of the “AI black box” problem — and it’s one of the most important issues in modern credit risk management.
+    This is the heart of the “AI black box” problem and it’s one of the most important issues in modern credit risk management.
 
 </p>
 
@@ -230,32 +230,24 @@ src="https://images.unsplash.com/photo-1554224154-26032ffc0d07">
 
 <p>
 
-    Traditional credit scoring models — logistic regression, scorecards, expert rules — have served banks well for decades. 
-    But they have limitations:
+    Traditional credit scoring models ie (logistic regression, scorecards, expert rules) have served banks well for decades. 
+    But they have some of the following limitations:
 
     <ul>
         <li>They struggle with non‑linear relationships</li>
         <li>They require heavy manual feature engineering</li>
         <li>They can’t easily incorporate alternative data</li>
-        <li>They often underperform in thin‑file or emerging‑market segments</li>
+        <li>They often underperform in thin file niche or emerging market segments</li>
     </ul>
-    
 </p>
 
 <p>
-    AI models, especially tree‑based ensembles and neural networks, offer:
-
-    <ul>
-        <li>Higher predictive accuracy</li>
-        <li>Ability to process thousands of variables</li>
-        <li>Better detection of subtle risk patterns</li>
-        <li>Faster decisioning at scale</li>
-    </ul>
+    AI models, particularly tree based ensembles and neural networks offer a powerful advantage 
+    in modern credit decisioning. They deliver higher predictive accuracy, can process thousands 
+    of variables simultaneously, and are capable of detecting subtle risk patterns that traditional 
+    models often miss. Beyond accuracy, they also enable much faster decisioning at scale, allowing 
+    financial institutions to evaluate applications more efficiently without sacrificing analytical depth.
 </p>
-
-
-
-
 
 <h2>The Hidden Danger: The AI Black Box</h2>
 
@@ -263,21 +255,15 @@ src="https://images.unsplash.com/photo-1554224154-26032ffc0d07">
     Many advanced AI models are opaque. They produce predictions without clearly showing why.
 </blockquote>
     
-<p>Many advanced AI models are opaque. They produce predictions without clearly showing why.</p>
-
 <p>
 
 This creates several risks:
-
 
 <ul>
     <li>
         <h3>Lack of Explainability </h3> 
         <p>
-            If a model rejects a loan, can the bank explain the reason to:
-            The customer?
-            The regulator?
-            The internal audit team?
+            If a model rejects a loan, can the bank explain the reason to the customer or ...the regulator?
             If the answer is no, the model is a liability.
         </p> 
     </li>
@@ -287,13 +273,8 @@ This creates several risks:
             AI learns from historical data.
             If historical decisions were biased, the AI will amplify that bias.
 
-            Examples:
-
-            Penalizing applicants from certain postal codes,
-
-            Overweighting variables correlated with income or ethnicity,
-
-            Misinterpreting alternative data,
+            For example a model may penalize applicants from certain postal codes, and overweighting other variables correlated with 
+            income or ethnicity.
 
             Without transparency, these biases go undetected.
         </p> 
@@ -301,7 +282,7 @@ This creates several risks:
     <li>
         <h3>Regulatory Non‑Compliance</h3>
         <p>
-            Frameworks (GDPR, Model Risk Management, Fair Lending Regulations) all require explainability, 
+            Frameworks like the GDPR, Model Risk Management, Fair Lending Regulations all require explainability, 
             fairness, and auditability. A black box model that cannot be explained is a regulatory time bomb.
         </p> 
     </li>
@@ -319,6 +300,8 @@ This creates several risks:
 <p>A major fintech once deployed a neural‑network credit model that heavily penalized applicants who
 
 Used older phones, applied late at night or had inconsistent typing speed.
+</p>
+<p>
 
 None of these variables were inherently linked to creditworthiness but the model found correlations in the training data.
 
@@ -330,9 +313,9 @@ This is the danger of complexity without understanding.
 
 <h2>The Solution: Explainable, Responsible AI</h2>
 
-<p>Banks don’t need to abandon AI to stay safe — they simply need to govern it properly. 
+<p>Banks don’t need to abandon AI to stay safe, they simply need to govern it properly. 
     The first step is adopting Explainable AI (XAI) techniques. Tools such as SHAP values, 
-    LIME, partial dependence plots, and feature‑importance analysis help analysts understand why a 
+    LIME, partial dependence plots, and feature importance analysis help analysts understand why a 
     model made a particular decision. This transparency is essential for validating model behaviour, 
     communicating decisions to customers, and satisfying regulatory expectations.
 </p>
