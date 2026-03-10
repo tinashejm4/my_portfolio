@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>How to Audit a Financial Model: A Practical Guide for Analysts and Decision‑Makers</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#0f172a;
+color:#e2e8f0;
+line-height:1.7;
+}
+
+/* Progress bar */
+
+.progress{
+position:fixed;
+top:0;
+left:0;
+height:4px;
+background:#38bdf8;
+width:0%;
+z-index:1000;
+}
+
+/* Navigation */
+
+header{
+background:#020617;
+border-bottom:1px solid #1e293b;
+}
+
+nav{
+width:92%;
+max-width:1300px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-family:'JetBrains Mono',monospace;
+color:#38bdf8;
+font-weight:600;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#cbd5f5;
+font-size:14px;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* Layout */
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+padding-top:50px;
+}
+
+.blog-layout{
+display:grid;
+grid-template-columns:3fr 1fr;
+gap:40px;
+}
+
+/* Article */
+
+.article h1{
+font-size:36px;
+margin-bottom:15px;
+}
+
+.meta{
+color:#94a3b8;
+font-size:14px;
+margin-bottom:25px;
+}
+
+.feature-image{
+width:100%;
+border-radius:8px;
+margin-bottom:30px;
+}
+
+.article p{
+margin-bottom:18px;
+font-size:17px;
+color:#e2e8f0;
+}
+
+.article h2{
+margin-top:30px;
+margin-bottom:12px;
+color:#38bdf8;
+}
+
+blockquote{
+border-left:3px solid #38bdf8;
+padding-left:15px;
+margin:20px 0;
+color:#94a3b8;
+font-style:italic;
+}
+
+/* Sidebar */
+
+.sidebar{
+background:#020617;
+padding:20px;
+border-radius:8px;
+border:1px solid #1e293b;
+height:fit-content;
+}
+
+.sidebar h3{
+margin-bottom:15px;
+}
+
+.sidebar a{
+display:block;
+color:#cbd5f5;
+margin-bottom:10px;
+text-decoration:none;
+font-size:14px;
+}
+
+.sidebar a:hover{
+color:#38bdf8;
+}
+
+/* Footer */
+
+footer{
+margin-top:80px;
+padding:25px;
+text-align:center;
+border-top:1px solid #1e293b;
+color:#94a3b8;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.blog-layout{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="progress" id="progressBar"></div>
+
+<header>
+
+<nav>
+
+<div class="logo">TM Terminal</div>
+
+<ul>
+<li><a href="../index.html">Home</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<div class="container">
+
+<div class="blog-layout">
+
+
+<article class="article">
+
+<h1>How to Audit a Financial Model: A Practical Guide for Analysts and Decision Makers</h1>
+
+<div class="meta">
+By Tinashe Munikwa | September 2025 | Model Audit
+</div>
+
+<img class="feature-image"
+src="https://images.unsplash.com/photo-1554224154-26032ffc0d07">
+
+<p>
+
+Financial models sit at the heart of strategic decision‑making. Whether a bank is evaluating a loan portfolio, 
+a company is assessing an investment, or a project team is forecasting cash flows, the model behind the decision must be 
+accurate, transparent, and reliable.
+
+Yet even well‑built models can contain errors — sometimes small, sometimes catastrophic. 
+That’s why model auditing is one of the most important skills in finance. A strong audit doesn’t just catch mistakes, 
+it builds confidence, strengthens governance, and ensures that decisions are grounded in reality.
+
+Here’s a practical, structured guide to auditing a financial model like a professional.
+</p>
+
+<h2>Start With Structure: Is the Model Built on Best Practices?</h2>
+
+<p>
+
+    Before diving into formulas, begin by assessing the model’s architecture. 
+    A well‑structured model is easier to understand, easier to audit, and far less prone to errors.
+
+The following are some of the considerations at this stage.
+
+    <ul>
+        <li>Are inputs, calculations, and outputs clearly separated?</li>
+        <li>Is the model laid out logically from top to bottom, left to right?</li>
+        <li>Are assumptions grouped and labelled?</li>
+        <li>Are consistent formatting conventions used (e.g., blue for inputs, black for formulas)?</li>
+        <li>Is the workbook free of unnecessary sheets, hidden rows, or hard coded values?</li>
+    </ul>
+
+
+
+</p>
+
+    <p>
+        A model that fails the structure test is already a red flag because poor structure often hides deeper issues.
+    </p>
+
+
+<h2>Check for Transparency: Can Someone Else Follow the Logic?</h2>
+
+<p>
+    A model should be understandable not only to its creator but to any competent analyst. 
+    Transparency is essential for governance, collaboration, and long‑term usability.
+</p>
+
+<p>
+    A model should have clear labels and headings and all assumptions should be documented. 
+    Overly complex formulas should be avoided as they are a hot bed for mistakes and are difficult to follow e.g nested IFs. 
+    If you can’t explain a formula in one sentence, it’s probably too complex.
+</p>
+
+<p>
+    Lastly make sure that there are no circular references unless intentionally designed and documented.
+</p>
+
+<h2>Test the Mechanics: Do the Formulas Work as Intended?</h2>
+
+
+<h2>Validate the Assumptions</h2>
+<p>
+  Even the most technically correct model can fail if its assumptions are unrealistic. Auditing assumptions means 
+  checking that they are grounded in credible data, aligned with historical performance, and consistent with 
+  market conditions. Assumptions should be easy to update and clearly referenced so that anyone reviewing the 
+  model understands where the numbers come from and why they were chosen.
+</p>
+
+<h2>Reconcile With Source Data</h2>
+<p>
+  A reliable model must tie back to real‑world data. This includes reconciling opening balances with financial 
+  statements, verifying historical inputs, and ensuring that totals match across sheets. Reconciliation errors 
+  are common and can undermine the credibility of the entire model if left unchecked.
+</p>
+
+<h2>Review the Outputs</h2>
+<p>
+  The final outputs of the model should be intuitive, clearly presented, and aligned with the model’s purpose. 
+  Dashboards, summaries, and key metrics should be easy to interpret, allowing decision‑makers to understand 
+  the implications quickly. If the outputs are confusing or inconsistent, the model may not be ready for use.
+</p>
+
+<h2>Document the Audit</h2>
+<p>
+  A thorough audit ends with clear documentation. A professional audit includes: 
+</p>
+  <ul>
+    <li>A summary of findings</li>
+    <li>A list of issues and severity levels</li>
+    <li>Recommendations for fixes</li>
+    <li>A log of changes made</li>
+    <li>A final sign‑off</li>
+  </ul>
+<p>
+  Good documentation ensures accountability and makes future reviews more efficient. 
+  It also provides confidence to stakeholders that the model has been rigorously assessed.
+</p>
+
+<h2>Final Thoughts</h2>
+<p>
+  Auditing a financial model is both a technical and analytical exercise. It requires attention to detail, 
+  strong financial intuition, and a commitment to best‑practice modelling principles. Analysts who can build, 
+  review, and validate models bring exceptional value to their teams — and stand out to recruiters looking for 
+  precision, discipline, and strategic thinking.
+
+</p>
+    
+</article>
+
+
+<aside class="sidebar">
+
+<h3>Related Articles</h3>
+
+<a href="#">How Analysts Evaluate Cash Flow Quality</a>
+<a href="#">Financial Ratios Used in Credit Analysis</a>
+<a href="#">Forecasting Revenue with Time Series Models</a>
+<a href="#">Building a Loan Risk Model in Python</a>
+
+</aside>
+
+
+</div>
+
+</div>
+
+
+
+<footer>
+
+<p>© 2026 Tinashe Munikwa | Financial Analyst Portfolio</p>
+
+</footer>
+
+
+
+<script>
+
+/* Reading progress bar */
+
+window.onscroll=function(){
+
+let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+
+let scrolled=(winScroll/height)*100;
+
+document.getElementById("progressBar").style.width=scrolled+"%";
+
+}
+
+</script>
+
+</body>
+</html>

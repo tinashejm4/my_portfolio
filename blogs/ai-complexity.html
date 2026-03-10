@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>When AI Decides Who Gets a Loan: The Promise, the Danger, and the Path Forward</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#0f172a;
+color:#e2e8f0;
+line-height:1.7;
+}
+
+/* Progress bar */
+
+.progress{
+position:fixed;
+top:0;
+left:0;
+height:4px;
+background:#38bdf8;
+width:0%;
+z-index:1000;
+}
+
+/* Navigation */
+
+header{
+background:#020617;
+border-bottom:1px solid #1e293b;
+}
+
+nav{
+width:92%;
+max-width:1300px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-family:'JetBrains Mono',monospace;
+color:#38bdf8;
+font-weight:600;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#cbd5f5;
+font-size:14px;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* Layout */
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+padding-top:50px;
+}
+
+.blog-layout{
+display:grid;
+grid-template-columns:3fr 1fr;
+gap:40px;
+}
+
+/* Article */
+
+.article h1{
+font-size:36px;
+margin-bottom:15px;
+}
+
+.meta{
+color:#94a3b8;
+font-size:14px;
+margin-bottom:25px;
+}
+
+.feature-image{
+width:100%;
+border-radius:8px;
+margin-bottom:30px;
+}
+
+.article p{
+margin-bottom:18px;
+font-size:17px;
+color:#e2e8f0;
+}
+
+.article h2{
+margin-top:30px;
+margin-bottom:12px;
+color:#38bdf8;
+}
+
+blockquote{
+border-left:3px solid #38bdf8;
+padding-left:15px;
+margin:20px 0;
+color:#94a3b8;
+font-style:italic;
+}
+
+/* Sidebar */
+
+.sidebar{
+background:#020617;
+padding:20px;
+border-radius:8px;
+border:1px solid #1e293b;
+height:fit-content;
+}
+
+.sidebar h3{
+margin-bottom:15px;
+}
+
+.sidebar a{
+display:block;
+color:#cbd5f5;
+margin-bottom:10px;
+text-decoration:none;
+font-size:14px;
+}
+
+.sidebar a:hover{
+color:#38bdf8;
+}
+
+/* Footer */
+
+footer{
+margin-top:80px;
+padding:25px;
+text-align:center;
+border-top:1px solid #1e293b;
+color:#94a3b8;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.blog-layout{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="progress" id="progressBar"></div>
+
+<header>
+
+<nav>
+
+<div class="logo">TM Terminal</div>
+
+<ul>
+<li><a href="../index.html">Home</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<div class="container">
+
+<div class="blog-layout">
+
+
+<article class="article">
+
+<h1>When AI Decides Who Gets a Loan: The Promise, the Danger, and the Path Forward</h1>
+
+<div class="meta">
+By Tinashe Munikwa | February 2026 | Credit Risk Analysis
+</div>
+
+<img class="feature-image"
+src="https://images.unsplash.com/photo-1554224154-26032ffc0d07">
+
+<p>
+
+    Artificial intelligence is transforming the financial sector. From credit scoring to fraud detection to portfolio optimization, 
+    banks are increasingly relying on complex machine‑learning systems to make faster, more accurate decisions.
+
+    But as AI becomes more powerful, a critical question emerges:
+    <i>What happens when banks rely on models they don’t fully understand?</i>
+
+    This is the heart of the “AI black box” problem — and it’s one of the most important issues in modern credit risk management.
+
+</p>
+
+<h2>Why Banks Are Turning to AI for Credit Decisions</h2>
+
+<p>
+
+    Traditional credit scoring models — logistic regression, scorecards, expert rules — have served banks well for decades. 
+    But they have limitations:
+
+    <ul>
+        <li>They struggle with non‑linear relationships</li>
+        <li>They require heavy manual feature engineering</li>
+        <li>They can’t easily incorporate alternative data</li>
+        <li>They often underperform in thin‑file or emerging‑market segments</li>
+    </ul>
+    
+</p>
+
+<p>
+    AI models, especially tree‑based ensembles and neural networks, offer:
+
+    <ul>
+        <li>Higher predictive accuracy</li>
+        <li>Ability to process thousands of variables</li>
+        <li>Better detection of subtle risk patterns</li>
+        <li>Faster decisioning at scale</li>
+    </ul>
+</p>
+
+
+
+
+
+<h2>The Hidden Danger: The AI Black Box</h2>
+
+<blockquote>
+    Many advanced AI models are opaque. They produce predictions without clearly showing why.
+</blockquote>
+    
+<p>Many advanced AI models are opaque. They produce predictions without clearly showing why.</p>
+
+<p>
+
+This creates several risks:
+
+
+<ul>
+    <li>
+        <h3>Lack of Explainability </h3> 
+        <p>
+            If a model rejects a loan, can the bank explain the reason to:
+            The customer?
+            The regulator?
+            The internal audit team?
+            If the answer is no, the model is a liability.
+        </p> 
+    </li>
+    <li>
+        <h3>Hidden Bias</h3>
+        <p>
+            AI learns from historical data.
+            If historical decisions were biased, the AI will amplify that bias.
+
+            Examples:
+
+            Penalizing applicants from certain postal codes,
+
+            Overweighting variables correlated with income or ethnicity,
+
+            Misinterpreting alternative data,
+
+            Without transparency, these biases go undetected.
+        </p> 
+    </li>
+    <li>
+        <h3>Regulatory Non‑Compliance</h3>
+        <p>
+            Frameworks (GDPR, Model Risk Management, Fair Lending Regulations) all require explainability, 
+            fairness, and auditability. A black box model that cannot be explained is a regulatory time bomb.
+        </p> 
+    </li>
+     <li>
+        <h3>Over Reliance on Model Outputs</h3>
+        <p>
+            When analysts don’t understand how a model works, they stop challenging it. This 
+            leads to blind trust, weak oversights, and poor judgement during economic 
+            shocks. In credit risk, blind trust is dangerous.
+        </p> 
+    </li>
+</ul>
+
+
+<p>A major fintech once deployed a neural‑network credit model that heavily penalized applicants who
+
+Used older phones, applied late at night or had inconsistent typing speed.
+
+None of these variables were inherently linked to creditworthiness but the model found correlations in the training data.
+
+Because the model was a black box, these issues went unnoticed until customers complained and regulators intervened.
+
+This is the danger of complexity without understanding.
+</p>
+
+
+<h2>The Solution: Explainable, Responsible AI</h2>
+
+<p>Banks don’t need to abandon AI to stay safe — they simply need to govern it properly. 
+    The first step is adopting Explainable AI (XAI) techniques. Tools such as SHAP values, 
+    LIME, partial dependence plots, and feature‑importance analysis help analysts understand why a 
+    model made a particular decision. This transparency is essential for validating model behaviour, 
+    communicating decisions to customers, and satisfying regulatory expectations.
+</p>
+
+<p>Another effective approach is to combine AI with traditional models. Hybrid frameworks where AI 
+    provides predictive power and scorecards provide interpretability and allow banks to enjoy the benefits 
+    of advanced analytics without sacrificing clarity. This balance ensures that decision makers 
+    can trace the logic behind every approval or rejection.
+</p>
+
+<p>
+    Strong model governance is equally important. A responsible AI framework includes independent model validation, 
+    bias testing, stability monitoring, thorough documentation, and clear override policies. These controls ensure 
+    that the model behaves as expected, remains stable over time, and can be audited when necessary.
+</p>
+
+<p>
+    Even with the best models, humans must remain in the loop. AI should support, not replace, human judgement. 
+    Analysts need to challenge model outputs, understand the model’s limitations, apply contextual reasoning, 
+    and escalate anomalies when something doesn’t look right. Human oversight is the ultimate safeguard against 
+    unintended consequences.
+</p>
+
+<p>
+    Finally, banks must conduct rigorous ethical and fairness checks. This means testing for disparate impact, 
+    proxy discrimination, unintended correlations, and data drift. Fairness is not just a regulatory requirement. 
+    It’s a reputational imperative. Institutions that can demonstrate ethical AI practices will earn greater trust from customers, 
+    regulators, and investors alike.
+</p>
+
+<h2>Final Thoughts</h2>
+
+
+<p>AI has the potential to revolutionize credit decisioning, but only if banks use it responsibly. 
+    The real risk is not the technology itself, but deploying models that decision makers don’t understand.
+    The future belongs to institutions that combine advanced analytics, strong governance, transparent modelling as well as human expertise.
+    And the analysts who understand this balance will lead the next generation of risk management.
+</p>
+    
+</article>
+
+
+<aside class="sidebar">
+
+<h3>Related Articles</h3>
+
+<a href="#">How Analysts Evaluate Cash Flow Quality</a>
+<a href="#">Financial Ratios Used in Credit Analysis</a>
+<a href="#">Forecasting Revenue with Time Series Models</a>
+<a href="#">Building a Loan Risk Model in Python</a>
+
+</aside>
+
+
+</div>
+
+</div>
+
+
+
+<footer>
+
+<p>© 2026 Tinashe Munikwa | Financial Analyst Portfolio</p>
+
+</footer>
+
+
+
+<script>
+
+/* Reading progress bar */
+
+window.onscroll=function(){
+
+let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+
+let scrolled=(winScroll/height)*100;
+
+document.getElementById("progressBar").style.width=scrolled+"%";
+
+}
+
+</script>
+
+</body>
+</html>
