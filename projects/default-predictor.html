@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quantifying Credit Risk: A Machine Learning Approach to MSME Default Prediction</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#0f172a;
+color:#e2e8f0;
+line-height:1.7;
+}
+
+header{
+background:#020617;
+border-bottom:1px solid #1e293b;
+}
+
+nav{
+width:92%;
+max-width:1300px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-family:'JetBrains Mono',monospace;
+color:#38bdf8;
+font-weight:600;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#cbd5f5;
+font-size:14px;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+padding-top:50px;
+}
+
+.layout{
+display:grid;
+grid-template-columns:3fr 1fr;
+gap:40px;
+}
+
+/* Project Content */
+
+.project h1{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.meta{
+color:#94a3b8;
+margin-bottom:20px;
+font-size:14px;
+}
+
+.hero-img{
+width:100%;
+border-radius:8px;
+margin-bottom:30px;
+}
+
+.project h2{
+margin-top:30px;
+margin-bottom:12px;
+color:#38bdf8;
+}
+
+.project p{
+margin-bottom:18px;
+font-size:17px;
+}
+
+blockquote{
+border-left:3px solid #38bdf8;
+padding-left:15px;
+margin:20px 0;
+color:#94a3b8;
+font-style:italic;
+}
+
+/* Skills */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:10px;
+}
+
+.skill{
+background:#020617;
+border:1px solid #1e293b;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+}
+
+/* Sidebar */
+
+.sidebar{
+background:#020617;
+padding:20px;
+border-radius:8px;
+border:1px solid #1e293b;
+height:fit-content;
+}
+
+.sidebar h3{
+margin-bottom:15px;
+}
+
+.sidebar p{
+font-size:14px;
+margin-bottom:10px;
+color:#cbd5f5;
+}
+
+.sidebar a{
+color:#38bdf8;
+text-decoration:none;
+font-size:14px;
+}
+
+.sidebar a:hover{
+text-decoration:underline;
+}
+
+/* Footer */
+
+footer{
+margin-top:80px;
+padding:25px;
+text-align:center;
+border-top:1px solid #1e293b;
+color:#94a3b8;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.layout{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">TM Terminal</div>
+
+<ul>
+<li><a href="../index.html">Home</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+
+<div class="container">
+
+<div class="layout">
+
+
+<article class="project">
+
+<h1>Quantifying Credit Risk: A Machine Learning Approach to MSME Default Prediction</h1>
+
+<div class="meta">
+Default Risk Predictor Project | Python | Credit Risk Analysis
+</div>
+
+<img class="hero-img"
+src="../media/feature-correlation.png">
+
+<div class="skills">
+
+    <div class="skill">Python</div>
+    <div class="skill">Pandas</div>
+    <div class="skill">NumPy</div>
+    <div class="skill">Scikit-learn</div>
+    <div class="skill">Seaborn</div>
+    <div class="skill">Matplotlib</div>
+
+</div>
+<br>
+<p>
+
+In the lending world, particularly for MSMEs, 
+the ability to accurately quantify risk is the difference between a healthy portfolio 
+and a financial crisis. This project demonstrates a complete end-to-end Credit Risk Quantification 
+workflow, moving from raw financial data to a deployable Probability of Default (PD) model. By utilizing 
+Logistic Regression and Weight of Evidence principles, I identified the key financial levers that drive 
+business failure and proposed actionable mitigation strategies.
+
+</p>
+
+
+<h2>Business Problem</h2>
+
+<p>
+
+Lending to MSMEs involves navigating sparse data environments. 
+Unlike retail banking, small business health is highly sensitive to leverage and 
+sector specific shocks. The goal of this project was to build a model that can:
+
+    <ul>
+        <li>Quantify the likelihood of default over a 12-month horizon.</li>
+        <li>Provide interpretable insights for a Credit Risk Committee.</li>
+        <li>Establish a data driven framework for setting credit limits.</li>
+    </ul>
+
+</p>
+
+
+<h2>Methodology</h2>
+
+
+<h3>Feature Engineering</h3>
+
+<p>
+
+I focused on four primary dimensions of financial health:
+
+<ul>
+    <li><strong>Leverage:</strong> Debt-to-Equity (D/E) Ratio.</li>
+    <li><strong>Liquidity:</strong> Current Ratio (Assets/Liabilities).</li>
+    <li><strong>Operational Stability:</strong> Business Age and Annual Revenue.</li>
+    <li><strong>Macro & Systemic Risk:</strong> Industry Sector classification.</li>
+</ul>
+</p>
+
+<h3>Statistical Validation</h3>
+<p>
+Before fitting the model, I utilized Correlation Matrices and Kernel Density Estimate (KDE) 
+plots to ensure the features had discriminatory power. For instance, the data revealed a 
+clear crossover point in the D/E ratio where the density of defaults began to outweigh healthy loans.
+
+</p>
+
+
+<h2>Model Results and Interpretation</h2>
+
+<p>
+
+I employed a Logistic Regression model with balanced class weights to 
+account for the relative rarity of default events.
+</p>
+<h3>Model Performance</h3>
+<p>
+The model achieved an AUC-ROC score of 0.76, indicating an good 
+ability to distinguish between high risk and low risk borrowers.
+
+The confusion matrix showed a high capture rate for defaults, 
+which is critical for minimizing the bank's Loss Given Default (LGD).
+</p>
+<h3>The Drivers of Risk</h3>
+<p>The model’s coefficients revealed a clear hierarchy of risk:
+
+    <ul>
+        <li><strong>Primary Risk Driver:</strong> Debt-to-Equity Ratio. For every one-unit increase in D/E, the odds of default increased by over 50%.</li>
+        <li><strong>Strongest Protector:</strong> Business Age. Older, more established businesses showed significantly higher 
+            resilience, acting as a natural hedge against volatility.</li>
+        <li><strong>Sector Volatility:</strong> The Manufacturing sector showed a higher baseline risk compared to Services, suggesting a need for tighter 
+            covenants in industrial lending.</li>
+    </ul>
+
+</p>
+
+<h2>Recommendations</h2>
+
+<p>
+
+    A model is only as good as the decisions it informs. Based on these findings, I proposed the following framework:
+
+    <ul>
+
+        <li><strong>Risk Based Pricing:</strong> Implementing tiered interest rates where businesses with a D/E ratio > 3.5 are charged a higher risk premium.</li>
+        <li><strong>Concentration Limits:</strong> Capping exposure to the Manufacturing sector to 20% of the total portfolio to ensure diversification.
+        </li>
+        <li><strong>Dynamic Monitoring:</strong> Requiring automated quarterly liquidity reporting for businesses with a Current Ratio near 1.0.</li>
+    </ul>
+
+</p>
+
+<p>
+
+    Additionally, companies operating in highly cyclical industries
+    displayed more volatile financial ratios, reinforcing the importance
+    of incorporating industry specific risk factors into credit models.
+
+</p>
+
+
+<h2>Conclusion</h2>
+
+    <p>
+
+        By combining Python based statistical modeling with sound financial logic, we can transform raw 
+        accounting data into a powerful early warning system. This approach not only protects the bank's 
+        capital but also allows for more confident lending to healthy businesses, supporting overall economic growth.
+
+    </p>
+
+
+</article>
+
+
+
+<aside class="sidebar">
+
+<h3>Project Details</h3>
+
+<p><strong>Category:</strong> Credit Risk Analytics</p>
+<p><strong>Project Type:</strong> PD Modeling</p>
+<p><strong>Dataset:</strong> Simulated SME Loans</p>
+<p><strong>Tools:</strong> Python, Pandas, NumPy, Seaborn, Matplotlib</p>
+
+<br>
+
+<h3>Links</h3>
+
+<p><a href="https://github.com/tinashejm4/default_risk_model.git">View Code (GitHub)</a></p>
+<p><a href="https://colab.research.google.com/drive/1gtVw5M6_Xjl6NKhQoVWsbdFQ5TRuos7S?usp=sharing">View Code (Google Colab)</a></p>
+<!-- <p><a href="#">Download Dataset</a></p> -->
+
+</aside>
+
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Tinashe Munikwa | Financial Analyst Portfolio</p>
+
+</footer>
+
+</body>
+</html>
