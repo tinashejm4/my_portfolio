@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Beyond the Cases: How I Upgraded Our Financial Forecasts with Stochastic Modeling</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#0f172a;
+color:#e2e8f0;
+line-height:1.7;
+}
+
+header{
+background:#020617;
+border-bottom:1px solid #1e293b;
+}
+
+nav{
+width:92%;
+max-width:1300px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-family:'JetBrains Mono',monospace;
+color:#38bdf8;
+font-weight:600;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#cbd5f5;
+font-size:14px;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+padding-top:50px;
+}
+
+.layout{
+display:grid;
+grid-template-columns:3fr 1fr;
+gap:40px;
+}
+
+/* Project Content */
+
+.project h1{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.meta{
+color:#94a3b8;
+margin-bottom:20px;
+font-size:14px;
+}
+
+.hero-img{
+width:100%;
+border-radius:8px;
+margin-bottom:30px;
+}
+
+.project h2{
+margin-top:30px;
+margin-bottom:12px;
+color:#38bdf8;
+}
+
+.project p{
+margin-bottom:18px;
+font-size:17px;
+}
+
+blockquote{
+border-left:3px solid #38bdf8;
+padding-left:15px;
+margin:20px 0;
+color:#94a3b8;
+font-style:italic;
+}
+
+/* Skills */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:10px;
+}
+
+.skill{
+background:#020617;
+border:1px solid #1e293b;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+}
+
+/* Sidebar */
+
+.sidebar{
+background:#020617;
+padding:20px;
+border-radius:8px;
+border:1px solid #1e293b;
+height:fit-content;
+}
+
+.sidebar h3{
+margin-bottom:15px;
+}
+
+.sidebar p{
+font-size:14px;
+margin-bottom:10px;
+color:#cbd5f5;
+}
+
+.sidebar a{
+color:#38bdf8;
+text-decoration:none;
+font-size:14px;
+}
+
+.sidebar a:hover{
+text-decoration:underline;
+}
+
+/* Footer */
+
+footer{
+margin-top:80px;
+padding:25px;
+text-align:center;
+border-top:1px solid #1e293b;
+color:#94a3b8;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.layout{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">TM Terminal</div>
+
+<ul>
+<li><a href="../index.html">Home</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+
+<div class="container">
+
+<div class="layout">
+
+
+<article class="project">
+
+<h1>Beyond the Cases: How I Upgraded Our Financial Forecasts with Stochastic Modeling</h1>
+
+<div class="meta">
+Monte Carlo Simulation | Python | Google Sheets | Credit Risk Analysis
+</div>
+
+<img class="hero-img"
+src="../media/distributions.png">
+
+<div class="skills">
+
+    <div class="skill">Python</div>
+    <div class="skill">Pandas</div>
+    <div class="skill">NumPy</div>
+    <div class="skill">Scikit-learn</div>
+    <div class="skill">Seaborn</div>
+    <div class="skill">Matplotlib</div>
+    <div class="skill">Google Sheets</div>
+    <div class="skill">Monte Carlo Simulation</div>
+
+</div>
+<br>
+<p>
+
+    This project pertains to a freelance project that I undertook for a client in the medical SAAS business. For years, the 
+    finance team relied on static spreadsheet models to forecast key SaaS metrics. While these models provided a 
+    baseline, they offered little insight into the range of possible outcomes and the probability of success. 
+    Recognizing this limitation, I embarked on a project to transition from deterministic forecasting to stochastic 
+    modeling. This article charts the journey from static scenarios to robust, probability based risk analysis using the Monte Carlo Simulation.
+</p>
+
+
+<h2>When Static Scenarios Stifle</h2>
+
+<p>
+
+The traditional model involved defining distinct Base, Bull, and Bear 
+cases for key drivers like growth and churn. While this felt structured, it suffered from critical flaws.
+Each scenario assumed static values for its drivers, neglecting the inherent fluctuations and dependencies in SaaS.
+The method used three distinct paths for forecasting, but there was no way to estimate how likely each was.
+Extremely rare, low probability outcomes that could make or break the company were often lost and unaccounted for.
+</p>
+<p>
+
+These limitations made it difficult to provide leadership with confident answers. Questions like "How certain are we to hit our targets?" 
+were impossible to answer.We needed a more sophisticated approach.
+
+</p>
+
+<p>
+
+I recreated the model in Google sheets incase you want to learn more. However i used synthetic data for confidentiality reasons.
+You can view it <a href="https://docs.google.com/spreadsheets/d/1zbsBI_rKR19pvFXZEjYtMuaBHF4iP1HO8sMG4fkz-z4/edit?usp=sharing">here.</a>
+</p>
+
+<h2>Embracing Uncertainty with Python</h2>
+
+<p>We decided to leverage Python to build a stochastic model using Monte Carlo simulation. 
+    This technique allows us to replace fixed point inputs with probability distributions.</p>
+
+<h2>Methodology</h2>
+
+
+<h3>Defining Probability Distributions</h3>
+
+<p>
+
+Instead of choosing one "Bear" churn rate, I defined a standard distribution with a mean and 
+standard deviation (eg Mean: 4%, StdDev: 1%).
+
+</p>
+
+<h3>The Simulation Engine</h3>
+    <p>
+        The Python script ran thousands of iterations of the model. In each iteration, the engine would 
+        randomly select a value from the probability distribution for each variable, pathing out a unique 
+        monthly forecast.
+    </p>
+
+<h3>What the distributions told us</h3>
+
+<p>By aggregating the results of all these simulated futures, I transformed abstract risk into a concrete, visual distribution.
+    The distributions generated by our model provided an entirely new lens through which to view the company’s user base and earnings. 
+    The following are some of the finding from the Monte Carlo simulation that were never possible using spreadsheet models.
+
+    <ul>
+        <li>The Mean of €745,477 became the probabilistic Base Case, meaning the expected outcome across all scenarios.</li>
+        <li>The spread from ~€450k to over €1M demonstrates the extreme sensitivity to even small fluctuations 
+            in key drivers, highlighting the critical nature of precise forecasting and good planning.</li>
+        <li>The tails of the distributions showed possibilities of revenue and users falling way below expectation. 
+            This quantified risk became a key input for the cash reserve strategy.</li>
+        <li>This distribution allowed IT teams to ensure infrastructure can handle up to 105k users. 
+            While it was unlikely, it's a measurable probability we needed to plan for."</li>
+    </ul>
+
+<h2>Actionable Insights</h2>
+
+<p>
+After reviewing the results of the project, I tasked myself to translate the statistical output into pragmatic strategies for the leadership.
+These are some oif the ways the new model helped the business.
+</p>
+<p>
+
+<ul>
+    <li><strong>Quantifiable Confidence:</strong> We moved from guesses to saying with statistical certainty: 
+        "We can be 95% confident that Year-End revenue will land between €550k and €950k.</li>
+    <li><strong>Risk Mitigation:</strong> The model helped us identify that a 2% increase in monthly churn 
+        (our severe "Stress Case") would trigger an immediate 5 month reduction in our cash runway. 
+        This quantified threshold allowed the creation of a mitigating plan.</li>
+    <li><strong>Sensitivity Alignment:</strong> Our analysis demonstrated that improving Cost of Aqcuiring a Customer (CAC) 
+        efficiency had a 3x higher impact on long term valuation than raw user growth. 
+        This has shifted our strategic focus toward higher value customer segments 
+        (e.g., clinicians) over purely high-volume acquisition (e.g., students)</li>
+</ul>
+</p>
+
+
+<h2>Conclusion</h2>
+
+    <p>
+        By upgrading our forecasting toolkit from basic spreadsheets to advanced stochastic modeling, 
+        we moved beyond simple goal setting to robust, data backed strategic planning. This ensures the company 
+        remained agile, profitable, and prepared for whatever future unfolds.
+    </p>
+
+</article>
+
+
+
+<aside class="sidebar">
+
+<h3>Project Details</h3>
+
+<p><strong>Category:</strong> Cashflow Forecasting</p>
+<p><strong>Project Type:</strong> Financial Analysis</p>
+<p><strong>Dataset:</strong> Simulated</p>
+<p><strong>Tools:</strong> Python, Pandas, NumPy, Matplotlib, Google Sheets</p>
+
+<br>
+
+<h3>Links</h3>
+
+<p><a href="https://github.com/tinashejm4/monte_carlo_sim.git">View Code (GitHub)</a></p>
+<p><a href="https://colab.research.google.com/drive/1-Kh25W9y158kByhn8rXS7ds6rM4_0r8A?usp=sharing">View Code (Google Colab)</a></p>
+<p><a href="https://docs.google.com/spreadsheets/d/1zbsBI_rKR19pvFXZEjYtMuaBHF4iP1HO8sMG4fkz-z4/edit?usp=sharing">View Document (Google Sheets)</a></p>
+<!-- <p><a href="#">Download Dataset</a></p> -->
+
+</aside>
+
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Tinashe Munikwa | Financial Analyst Portfolio</p>
+
+</footer>
+
+</body>
+</html>
