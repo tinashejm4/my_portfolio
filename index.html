@@ -233,6 +233,72 @@
             color: #beecff;
         }
 
+
+/* ----------------------------------- */
+
+  /* CTA Section
+   */
+  .contact-cta {
+    background:#020617;   
+    border:1px solid #1e293b;
+    padding: 4rem 1rem;
+    margin: 4rem auto;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 900px; /* matches your content width */
+  }
+
+  .contact-cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .contact-cta p {
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.15rem;
+    line-height: 1.7;
+            color:#94a3b8;
+
+  }
+
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    padding: 0.9rem 1.8rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+  }
+
+  .cta-btn.primary {
+    background: white;
+    color: #020617;
+  }
+
+  .cta-btn.primary:hover {
+    background: rgb(218, 218, 218);
+  }
+
+  .cta-btn.secondary {
+    border: 2px solid white;
+    color: rgb(218, 218, 218);
+  }
+
+  .cta-btn.secondary:hover {
+    background: #000;
+    border: 2px solid rgb(218, 218, 218);
+    color: rgb(218, 218, 218);
+  }
+
     </style>
 </head>
 
@@ -262,40 +328,58 @@
 <section class="hero container">
 
     <h1>Tinashe J Munikwa</h1>
-    <h3>Financial Analyst | Data & Risk Analytics</h3>
+    <h3>Credit Analyst | Data Analytics</h3>
 
     <p>
-        Talented Financial analyst specialising in credit risk modelling, financial forecasting
-        and insights using Python, SQL and Excel.
+        “I’m an Analyst based in Berlin, specialising in credit risk, forecasting, and
+         model driven decision support. I build analytical tools that help organisations understand risk, 
+         optimise performance, and plan with confidence.”
     </p>
 
     <div class="kpis">
 
         <div class="kpi">
-            <h2 class="counter" data-target="4">0</h2>
+            <h2 class="counter" >4</h2>
             <p>Years of experience</p>
         </div>
 
         <div class="kpi">
-            <h2 class="counter" data-target="12">0</h2>
-            <p>Projects Built</p>
+            <h2 class="counter">US$5M</h2>
+            <p>Loan Portfolio Management</p>
         </div>
 
         <div class="kpi">
-            <h2 class="counter" data-target="4">0</h2>
-            <p>Financial Models</p>
+            <h2 class="counter">11</h2>
+            <p>Models Built</p>
         </div>
 
         <div class="kpi">
-            <h2 class="counter" data-target="5">0</h2>
-            <p>Certifications</p>
+            <h2 class="counter">100%</h2>
+            <p>Process Automation</p>
         </div>
+
+        
 
 
 
     </div>
 
 </section>
+
+<section class="contact-cta">
+  <h2>Let’s Work Together</h2>
+  <p>If you’re looking for a financial analyst who builds clear, reliable models and data‑driven insights, I’d love to connect.</p>
+
+  <div class="cta-buttons">
+    <a href="mailto:tinashejm4@gmail.com" class="cta-btn primary">Email Me</a>
+    <a href="https://www.linkedin.com/in/tinashemunikwa" target="_blank" class="cta-btn secondary">Connect on LinkedIn</a>
+  </div>
+</section>
+
+<style>
+
+</style>
+
 
 
     <section id="skills" class="section container">
@@ -307,11 +391,15 @@
             <div class="skill-pill" onclick="filterProjects('python')">Python</div>
             <div class="skill-pill" onclick="filterProjects('excel')">Excel</div>
             <div class="skill-pill" onclick="filterProjects('sql')">SQL</div>
+            <div class="skill-pill" onclick="filterProjects('Power BI')">Power BI</div>
+            <div class="skill-pill" onclick="filterProjects('Tableau')">Tableau</div>
+            <div class="skill-pill" onclick="filterProjects('JavaScript')">JavaScript</div>
             <div class="skill-pill" onclick="filterProjects('financial')">Financial Modelling</div>
             <div class="skill-pill" onclick="filterProjects('risk')">Credit Risk</div>
             <div class="skill-pill" onclick="filterProjects('forecasting')">Forecasting</div>
             <div class="skill-pill" onclick="filterProjects('visualization')">Data Visualization</div>
-            <div class="skill-pill" onclick="filterProjects('dashboard')">Dashboards</div>
+            <div class="skill-pill" onclick="filterProjects('dashboard')">Statistical Analysis</div>
+            <div class="skill-pill" onclick="filterProjects('Statistical Analysis')">Statistical Analysis</div>
 
         </div>
 
@@ -336,12 +424,31 @@
 
     </section> -->
 
+    
 
     <section id="projects" class="section container">
 
+        
         <h2 class="section-title">Featured Projects</h2>
 
+
+
         <div class="projects">
+
+            <div class="project-card" data-skill="excel dashboard">
+
+                <img src="media/solar_farm.jpg">
+
+                <div class="project-content">
+
+                    <a href="projects/project-aurelius.html">Project Aurelius</a>
+
+                    <p>FAST Financial Modeling</p>
+
+                </div>
+
+            </div>
+
 
             <div class="project-card" data-skill="python risk">
 
@@ -355,37 +462,22 @@
 
             </div>
 
-        </div>
+            </div>
 
 
-        <div class="project-card" data-skill="excel dashboard">
+            <div class="project-card" data-skill="excel dashboard">
 
-        <img src="media/distributions.png">
+                <img src="media/distributions.png">
 
-        <div class="project-content">
+                <div class="project-content">
 
-            <a href="projects/monte-carlo.html">Monte Carlo Simulation</a>
+                    <a href="projects/monte-carlo.html">Monte Carlo Simulation</a>
 
-            <p>How I Upgraded Our Financial Forecasts with Stochastic Modeling</p>
+                    <p>How I Upgraded Our Financial Forecasts with Stochastic Modeling</p>
 
-        </div>
+                </div>
 
-        </div>
-
-
-        <div class="project-card" data-skill="python visualization">
-
-        <img src="https://images.unsplash.com/photo-1556155092-8707de31f9c4">
-
-        <div class="project-content">
-
-        <h3>Customer Sentiment Analytics</h3>
-
-        <p>NLP analysis of 10k+ reviews.</p>
-
-        </div>
-
-        </div>
+            </div>
 
         </div>
 
@@ -452,6 +544,12 @@
         <div class="certifications">
 
             <div class="cert-card">
+                <img src="media/cert-fin-mod.png">
+                <a href="https://app.diplomasafe.com/en-US/certificates/d6be9af9af484b32d53694f1d1e90071441aa9bab" target="_blank">Essential Financial Modelling</a>
+                <h5>Mar 2026</h5>
+            </div>
+
+            <div class="cert-card">
                 <img src="media/cert-advanced-sql.jpg">
                 <a href="https://www.linkedin.com/learning/certificates/f3f751924ef0988efb327ebaafa27bf3bd2ab0c40df87dce39c7eb648704bf8b" target="_blank">Advanced SQL for Data Scientists</a>
                 <h5>Feb 2026</h5>
@@ -495,88 +593,12 @@
 
 <footer>
 
-<p>© 2026 Tinashe Munikwa | Financial Analyst Portfolio</p>
+<p>© 2026 Tinashe Munikwa | Credit Analyst Portfolio</p>
 
 </footer>
 
 
 <script>
-
-/* KPI COUNTER */
-
-document.querySelectorAll('.counter').forEach(counter=>{
-
-counter.innerText='0'
-
-const update=()=>{
-
-const target=+counter.getAttribute('data-target')
-const c=+counter.innerText
-const increment=target/100
-
-if(c<target){
-
-counter.innerText=Math.ceil(c+increment)
-setTimeout(update,20)
-
-}else{
-
-counter.innerText=target
-
-}
-
-}
-
-update()
-
-})
-
-
-/* PROJECT FILTER */
-
-function filterProjects(skill){
-
-const cards=document.querySelectorAll('.project-card')
-
-cards.forEach(card=>{
-
-if(card.dataset.skill.includes(skill)){
-card.style.display="block"
-}else{
-card.style.display="none"
-}
-
-})
-
-}
-
-
-/* CHARTS */
-
-new Chart(document.getElementById('revenueChart'),{
-type:'line',
-data:{
-labels:['2019','2020','2021','2022','2023'],
-datasets:[{
-label:'Revenue Growth',
-data:[10,15,22,28,35],
-borderColor:'#38bdf8',
-fill:false
-}]
-}
-})
-
-new Chart(document.getElementById('riskChart'),{
-type:'bar',
-data:{
-labels:['Low','Medium','High'],
-datasets:[{
-label:'Loan Risk Distribution',
-data:[60,30,10],
-backgroundColor:['#22c55e','#f59e0b','#ef4444']
-}]
-}
-})
 
 </script>
 

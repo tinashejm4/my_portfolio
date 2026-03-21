@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aurelius Power Solar Project</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#0f172a;
+color:#e2e8f0;
+line-height:1.7;
+}
+
+header{
+background:#020617;
+border-bottom:1px solid #1e293b;
+}
+
+nav{
+width:92%;
+max-width:1300px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-family:'JetBrains Mono',monospace;
+color:#38bdf8;
+font-weight:600;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#cbd5f5;
+font-size:14px;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+padding-top:50px;
+}
+
+.layout{
+display:grid;
+grid-template-columns:3fr 1fr;
+gap:40px;
+}
+
+/* Project Content */
+
+.project h1{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.meta{
+color:#94a3b8;
+margin-bottom:20px;
+font-size:14px;
+}
+
+.hero-img{
+width:100%;
+border-radius:8px;
+margin-bottom:30px;
+}
+
+.project h2{
+margin-top:30px;
+margin-bottom:12px;
+color:#38bdf8;
+}
+
+.project p{
+margin-bottom:18px;
+font-size:17px;
+}
+
+blockquote{
+border-left:3px solid #38bdf8;
+padding-left:15px;
+margin:20px 0;
+color:#94a3b8;
+font-style:italic;
+}
+
+/* Skills */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:10px;
+}
+
+.skill{
+background:#020617;
+border:1px solid #1e293b;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+}
+
+/* Sidebar */
+
+.sidebar{
+background:#020617;
+padding:20px;
+border-radius:8px;
+border:1px solid #1e293b;
+height:fit-content;
+}
+
+.sidebar h3{
+margin-bottom:15px;
+}
+
+.sidebar p{
+font-size:14px;
+margin-bottom:10px;
+color:#cbd5f5;
+}
+
+.sidebar a{
+color:#38bdf8;
+text-decoration:none;
+font-size:14px;
+}
+
+.sidebar a:hover{
+text-decoration:underline;
+}
+
+p a{
+    color:#38bdf8;
+}
+
+/* Footer */
+
+footer{
+margin-top:80px;
+padding:25px;
+text-align:center;
+border-top:1px solid #1e293b;
+color:#94a3b8;
+}
+
+  .model-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+
+  .model-table th {
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+  }
+
+  .model-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .model-table tr:hover {
+    background: cornflowerblue;
+  }
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.layout{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">TM Terminal</div>
+
+<ul>
+<li><a href="../index.html">Home</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+
+<div class="container">
+
+<div class="layout">
+
+
+<article class="project">
+
+<h1>Aurelius Power Solar Project: A FAST Standard Financial Model for a 25 Year Solar Asset</h1>
+
+<div class="meta">
+FAST Financial Modeling | Excel | VBA | Business Analysis
+</div>
+
+
+<img class="hero-img" src="../media/solar_farm.jpg" 
+alt="Photo by American Public Power Association">
+
+<div class="skills">
+
+    <div class="skill">Excel</div>
+    <div class="skill">VBA Automation</div>
+    <div class="skill">Financial Modelling</div>
+
+</div>
+<br>
+<P>For context please find the project requirements <a href="files/Project_Aurelius.pdf" download = "Aurelius-Financial-Model.pdf">here.</a></P>
+
+
+<p>
+
+When Aurelius Power was invited to acquire a 40% stake in a newly commissioned solar project, 
+the investment team needed a model that could stand up to scrutiny, transparent enough for committee review, 
+robust enough for scenario testing, and structured enough to be audited line by line. 
+I built this model from the ground up using the FAST Standard, ensuring clarity, consistency, 
+and complete traceability across every calculation.
+
+</p>
+<p>
+The project itself is anchored by a 25 year Power Purchase Agreement with a government off taker, 
+a fixed tariff of 6.5 US¢/kWh, and a P50 generation estimate of 250 GWh per year. 
+With political risk, availability assumptions, degradation, and financing structure all influencing returns, 
+the model needed to capture the full lifecycle of the asset from COD (Commercial Operations Date) through debt 
+repayment and long term operations.
+</p>
+
+<h2>FAST standard</h2>
+
+<p>
+
+The FAST Standard is a disciplined modelling methodology built around 
+<strong>Flexibility, Accuracy, Structure, and Transparency</strong>, and in practice it means 
+constructing spreadsheets that are easy to follow, easy to audit, and easy to modify. 
+Under FAST, inputs are centralised, timelines are consistent across sheets, formulas are short 
+and readable, and calculations flow in a clear left to right structure, allowing anyone 
+to trace logic without digging through hidden cells or complex nesting.
+<p>
+    It is the standard to follow when working on large and complex financial models within a team and 
+    is perfect for technical and non-technical stakeholders.
+</p>
+</p>
+
+<h2>Model Architecture</h2>
+
+<p>
+    The workbook is structured into clear, modular sheets. This structure 
+    ensures the model is easy to navigate, easy to audit, and easy to extend, consistent with FAST principles.
+</p>
+
+<p>
+    You can find the Excel file <a href="files/aurelius-project.xlsm" download>here.</a>
+</p>
+
+<p>
+
+<table class="model-table">
+  <thead>
+    <tr>
+      <th>Sheet</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>InpC</td>
+      <td>Centralised input sheet with scenario selectors, timing assumptions, technical parameters, O&amp;M, financing, and accounting inputs.</td>
+    </tr>
+    <tr>
+      <td>Time</td>
+      <td>A fully dynamic timeline using flags and counters to drive operating periods, contract years, depreciation life, and senior debt repayment periods.</td>
+    </tr>
+    <tr>
+      <td>Ops</td>
+      <td>Revenue and O&amp;M calculations including seasonal generation, degradation, tariff application, and escalation.</td>
+    </tr>
+    <tr>
+      <td>Acct</td>
+      <td>Depreciation schedules and asset book value roll‑forward.</td>
+    </tr>
+    <tr>
+      <td>Debt</td>
+      <td>Senior debt drawdown, interest, principal repayment, and DSCR calculations.</td>
+    </tr>
+    <tr>
+      <td>Equity</td>
+      <td>Share capital, retained earnings, retained cash, and dividend waterfall.</td>
+    </tr>
+    <tr>
+      <td>Metrics</td>
+      <td>Equity IRR, blended IRR, premium calculation, DSCR metrics, and scenario comparison outputs.</td>
+    </tr>
+    <tr>
+      <td>FS Qtr / FS Ann</td>
+      <td>Quarterly and annual financial statements (Income Statement, Cash Flow Statement, Balance Sheet).</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+</p>
+
+<h2>Building the model</h2>
+
+<p>
+
+    The model follows a clean, modular architecture. inputs flow into calculations, which flow into outputs, 
+    with no circularity or hidden logic. All assumptions sit in a single input sheet, 
+    making the model easy to update and easy to audit. A dynamic timeline 
+    drives every calculation, ensuring that changes in COD, PPA 
+    length, or useful life automatically cascade through the model.
+</p>
+<p>
+    Revenue is built from the ground up. Seasonal generation, annual degradation, availability, and tariff structure combine to 
+    produce a realistic production profile. O&M (Operation and Maintanance) costs escalate annually, senior debt amortises quarterly, and depreciation 
+    follows the useful life of the solar asset. The equity waterfall then distributes cash to shareholders, 
+    allowing the model to compute both blended equity IRR and Aurelius’ standalone IRR.
+</p>
+<p>
+    One of the core objectives was to determine the investment premium Aurelius should pay at COD. 
+    The model isolates Aurelius’ share of distributions, discounts them appropriately, and solves for the 
+    premium required to meet the firm’s 12% target IRR. Scenario selectors allow the user to toggle between base 
+    cases and stress cases, instantly updating IRR, DSCR, and cash flow outcomes.
+</p>
+
+<h2>Execution</h2>
+
+<p>
+    Although the model is built entirely in Excel, it behaves like a lightweight analytical engine. 
+    I relied heavily on FAST aligned techniques with consistent column structures, transparent formulas, named constants, 
+    and strict separation of inputs and calculations. The model includes quarterly and annual financial statements, 
+    a full debt schedule, and a scenario driven output dashboard.
+</p>
+<p>
+    To speed up development and maintain structural integrity, I used a range of advanced Excel shortcuts. For example 
+    (Ctrl + PageUp/PageDown) for navigation, (Ctrl + [) for formula auditing, (F4) reference anchoring, and 
+    (Alt + E + S + V) structured pasting. These shortcuts allowed me to work quickly without compromising accuracy.
+</p>
+<p>
+    I also incorporated VBA automation to streamline repetitive tasks, such as relocating input rows and resetting 
+    scenario structures. The macro ensures that formatting, spacing, and row integrity remain consistent with FAST 
+    principles, even as inputs evolve.
+</p>
+
+<h2>Outcome</h2>
+
+<p>
+    The final model provides Aurelius Power with a clear, defensible view of the project’s economics. 
+    It quantifies the investment premium, highlights the sensitivity of returns to availability and
+     degradation, and produces lender friendly DSCR metrics. Most importantly, it gives decision makers 
+     a transparent, auditable tool they can rely on. The model reflects both the complexity of the
+      asset and the discipline of best practice modelling.
+</p>
+<p>
+    This project demonstrates my ability to build structured, investment grade financial models that combine
+     technical rigour with practical usability. It also reflects my broader modelling philosophy of clarity over
+      complexity and transparency above all.
+</p>
+
+</article>
+
+<aside class="sidebar">
+
+<h3>Project Details</h3>
+
+<p><strong>Category:</strong> Cashflow Forecasting</p>
+<p><strong>Project Type:</strong> Financial Analysis</p>
+<p><strong>Dataset:</strong> Simulated</p>
+<p><strong>Tools:</strong> Python, Pandas, NumPy, Matplotlib, Google Sheets</p>
+
+<br>
+
+<h3>Links</h3>
+<p><a href="files/aurelius-project.xlsm" download>Download Excel Model</a></p>
+<p><a href="files/Project_Aurelius.pdf" download>View Project Outline</a></p>
+
+</aside>
+
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Tinashe Munikwa | Financial Analyst Portfolio</p>
+
+</footer>
+
+</body>
+</html>
