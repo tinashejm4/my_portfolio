@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tinashe Munikwa | Financial Analyst</title>
+<title>Tinashe Munikwa | Credit Analyst</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
@@ -328,7 +328,7 @@
 <section class="hero container">
 
     <h1>Tinashe J Munikwa</h1>
-    <h3>Credit Analyst | Data Analytics</h3>
+    <h3>Credit Analyst</h3>
 
     <p>
         “I’m an Analyst based in Berlin, specialising in credit risk, forecasting, and
@@ -339,7 +339,7 @@
     <div class="kpis">
 
         <div class="kpi">
-            <h2 class="counter" >4</h2>
+            <h2 class="counter" >+4</h2>
             <p>Years of experience</p>
         </div>
 
@@ -368,8 +368,7 @@
 
 <section class="contact-cta">
   <h2>Let’s Work Together</h2>
-  <p>If you’re looking for a financial analyst who builds clear, reliable models and data‑driven insights, I’d love to connect.</p>
-
+  <p>If you’re looking for a credit analyst who builds clear, reliable models and data‑driven insights, I’d love to connect.</p>
   <div class="cta-buttons">
     <a href="mailto:tinashejm4@gmail.com" class="cta-btn primary">Email Me</a>
     <a href="https://www.linkedin.com/in/tinashemunikwa" target="_blank" class="cta-btn secondary">Connect on LinkedIn</a>
@@ -596,11 +595,16 @@
 <p>© 2026 Tinashe Munikwa | Credit Analyst Portfolio</p>
 
 </footer>
-
-
+<div id="footer"></div>
 <script>
+    fetch("components/footer.html")
+    .then(res => res.text())
+    .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
 
 </script>
+
 
 </body>
 </html>

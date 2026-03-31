@@ -375,13 +375,21 @@ This is the danger of complexity without understanding.
 </div>
 
 
-
 <footer>
 
-<p>© 2026 Tinashe Munikwa | Financial Analyst Portfolio</p>
+<p>© 2026 Tinashe Munikwa | Credit Analyst Portfolio</p>
 
 </footer>
 
+<div id="footer"></div>
+<script>
+    fetch("../components/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+
+</script>
 
 
 <script>
